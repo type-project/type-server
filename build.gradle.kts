@@ -22,9 +22,17 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.jetbrains:annotations:20.1.0")
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("com.h2database:h2")
     annotationProcessor("org.projectlombok:lombok")
+
+    // Google Speech To Text
+    implementation(platform("com.google.cloud:libraries-bom:26.1.4"))
+    implementation("com.google.cloud:google-cloud-speech")
+    implementation("com.google.protobuf:protobuf-java:3.21.12")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
