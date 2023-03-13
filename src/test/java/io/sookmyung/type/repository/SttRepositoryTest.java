@@ -47,6 +47,7 @@ class SttRepositoryTest extends JpaRepositoryTest<SttRepository, Stt, Long> {
         return Stt.builder()
                 .slideIdx(random.nextInt())
                 .content(RandomString.make(100))
+                .noteSeq(note.getNoteSeq())
                 .note(note)
                 .build();
     }
@@ -62,7 +63,6 @@ class SttRepositoryTest extends JpaRepositoryTest<SttRepository, Stt, Long> {
         Stt stt = generator();
         Stt save = repository.save(stt);
         Long noteSeq = save.getNote().getNoteSeq();
-        logger.info("noteSeq = " + noteSeq);
 
         List<Stt> sttList = repository.findAllByNote_NoteSeq(noteSeq);
 

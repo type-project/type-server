@@ -20,8 +20,7 @@ public class Slide {
     @Column(name = "slide_summary", nullable = false, columnDefinition = "TEXT")
     private String summary;
 
-    @MapsId("noteSeq")
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "note_seq", referencedColumnName = "note_seq")
+    @JoinColumn(name = "note_seq", referencedColumnName = "note_seq", insertable = false, updatable = false)
     private Note note;
 }

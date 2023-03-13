@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public interface SttRepository extends JpaRepository<Stt, Long> {
-    List<Stt> findAllByNote(Note note);
+    List<Stt> findAllByNote_NoteSeq(Long noteSeq);
 
-    List<Stt> findSttsByNoteAndSlideIdx(Note note, Integer slideIdx);
+    List<Stt> findAllBySlideIdxAndNote_NoteSeq(Integer slideIdx, Long noteSeq);
 }
