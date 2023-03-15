@@ -16,9 +16,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import java.io.FileInputStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
@@ -36,21 +34,7 @@ public class SttRestControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    @DisplayName("STT CONTROLLER : /app/")
-    void testIndex() throws Exception {
-        //given
-        String res = "Greetings from Type application!";
-        //when
-
-        //then
-        mockMvc.perform(get("/app/")) //MockMvc를 통해 /hello 주소로 GET 요청
-                //mvc.perform()의 결과를 검증
-                .andExpect(status().isOk()) //200 상태
-                .andExpect(content().string(res)); //응답 본문의 내용을 검증
-    }
-
-    @Test
-    @DisplayName("STT CONTROLLER : /app/audio")
+    @DisplayName("STT CONTROLLER : /stt/audio")
     public void testHandleAudioMessage() throws Exception {
         //given
         // Create a mock audio file
@@ -72,7 +56,7 @@ public class SttRestControllerTest {
         //when
         //then
         // Call the controller endpoint
-        MvcResult result = mockMvc.perform(multipart("/app/audio")
+        MvcResult result = mockMvc.perform(multipart("/stt/audio")
                         .file(audioFile)
                         .param("userSeq", String.valueOf(userSeq))
                         .param("slideIdx", String.valueOf(slideIdx)))

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @Slf4j
 @RestController
-@RequestMapping("app")
+@RequestMapping("stt")
 public class SttRestController {
 
     @Autowired
