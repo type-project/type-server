@@ -38,6 +38,7 @@ class SlideRepositoryTest extends JpaRepositoryTest<SlideRepository, Slide, Slid
         Random random = new Random();
         Note note = Note.builder()
                 .userSeq(random.nextLong())
+                .name(RandomString.make(10))
                 .slideUrl("https://" + RandomString.make(10))
                 .build();
         noteRepository.save(note);

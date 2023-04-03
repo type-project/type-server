@@ -39,6 +39,7 @@ class SttRepositoryTest extends JpaRepositoryTest<SttRepository, Stt, Long> {
         Random random = new Random();
         Note note = Note.builder()
                 .userSeq(random.nextLong())
+                .name(RandomString.make(10))
                 .slideUrl("https://" + RandomString.make(10))
                 .build();
         noteRepository.save(note);

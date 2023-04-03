@@ -29,6 +29,7 @@ class NoteRepositoryTest {
 
     protected Note generateNote(Long userSeq) {
         return Note.builder().userSeq(userSeq)
+                .name(RandomString.make(10))
                 .slideUrl("https://" + RandomString.make(10))
                 .build();
     }
