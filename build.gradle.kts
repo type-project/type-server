@@ -27,6 +27,9 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     annotationProcessor("org.projectlombok:lombok")
 
+    // Amazon RDS MariaDB
+    implementation("org.mariadb.jdbc:mariadb-java-client")
+
     // Google Speech To Text
     implementation(platform("com.google.cloud:libraries-bom:26.1.4"))
     implementation("com.google.cloud:google-cloud-speech")
