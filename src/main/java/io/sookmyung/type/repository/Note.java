@@ -17,12 +17,19 @@ public class Note extends BaseTime {
     @Column(name = "note_seq", nullable = false)
     private Long noteSeq;
 
-    @Column(name = "user_seq", nullable = false)
-    private Long userSeq;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @Column(name = "slide_url", columnDefinition = "TEXT")
     private String slideUrl;
 
+    @Setter
     @Column(name = "note_summary", columnDefinition = "TEXT")
     private String summary;
+
+    @Column(name = "user_seq", nullable = false)
+    private Long userSeq;
+
+    @Column(name = "thumbnail")
+    private String thumbnail;
 }
