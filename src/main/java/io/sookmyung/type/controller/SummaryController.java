@@ -14,7 +14,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/summary")
 public class SummaryController {
     @Autowired
+    private NoteManagerImpl noteService;
+    @Autowired
     private SlideManagerImpl slideService;
+
+    @GetMapping("/note")
+    public ResponseEntity<String> summaryNote(@RequestParam("noteSeq") Long noteSeq) {
+        log.info("/summary/note?" + noteSeq);
+
+        String summary = noteService.summaryNote(noteSeq);
+
+        if (summary == null) return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("요약에 실패하였습니다");
+        else return ResponseEntity.ok(summary);
+    }
 
     @GetMapping(value = "/slide")
     public ResponseEntity<SlideSummaryResponseDto> summarySlide(@RequestParam("noteSeq") Long noteSeq,
