@@ -7,10 +7,10 @@
 <table>
   <tr>
     <td><img width="778" alt="스크린샷 2023-04-09 오후 6 01 59" src="https://user-images.githubusercontent.com/69137469/230764912-baf10e0b-196a-4593-ab77-fc9f94031c29.png"></td>
-    <td><img width="777" alt="스크린샷 2023-04-09 오후 6 03 05" src="https://user-images.githubusercontent.com/69137469/230764923-d42f8563-ee03-4aff-a825-f52797ffba25.png"></td>
-    <td><img width="779" alt="스크린샷 2023-04-09 오후 6 02 50" src="https://user-images.githubusercontent.com/69137469/230764925-af2c2d32-0db5-4bcf-9a0e-9abff1ba7401.png"></td>
-    <td><img width="777" alt="스크린샷 2023-04-09 오후 6 02 35" src="https://user-images.githubusercontent.com/69137469/230764927-6531248f-d040-4f07-a34a-c04139abdfb9.png"></td>
     <td><img width="778" alt="스크린샷 2023-04-09 오후 6 02 19" src="https://user-images.githubusercontent.com/69137469/230764930-4f4f2815-e91d-49ab-b9c7-ad81bfd5edab.png"></td>
+    <td><img width="777" alt="스크린샷 2023-04-09 오후 6 02 35" src="https://user-images.githubusercontent.com/69137469/230764927-6531248f-d040-4f07-a34a-c04139abdfb9.png"></td>
+    <td><img width="779" alt="스크린샷 2023-04-09 오후 6 02 50" src="https://user-images.githubusercontent.com/69137469/230764925-af2c2d32-0db5-4bcf-9a0e-9abff1ba7401.png"></td>
+    <td><img width="777" alt="스크린샷 2023-04-09 오후 6 03 05" src="https://user-images.githubusercontent.com/69137469/230764923-d42f8563-ee03-4aff-a825-f52797ffba25.png"></td>
   </tr>
  </table>
  
@@ -44,8 +44,6 @@ Springboot 3.0.2
 + PPT, PDF 등의 수업 자료를 기반으로 하는 경우 각 슬라이드마다의 핵심 내용 요약을 제공합니다.
 + 강의 내용을 바탕으로 빈칸 채우기 문제를 생성하여 학습에 도움을 줍니다.
 + 강의 내용과 관련된 교재의 문제를 찍어 해답을 요청하면, 강의 내용과 GPT3.5의 지식을 바탕으로 한 답안을 제공합니다.
-
--> [source code](https://github.com/type-project/type-server/tree/develop)
 
 ### 기대 효과
 + 이는 청각 장애를 가진 학생들에게 폭넓은 교육의 기회를 제공하는 발판이 될 것입니다.
